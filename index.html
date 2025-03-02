@@ -1,58 +1,12 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Dulip Sameera Weliwaththa</title>
-    <style>
-      body {
-          font-family: Arial, sans-serif;
-          background: linear-gradient(to right, #2c3e50, #4ca1af);
-          color: white;
-          text-align: center;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
-          margin: 0;
-      }
-      h1 {
-          font-size: 3rem;
-      }
-      #countdown {
-          font-size: 2rem;
-          margin: 20px 0;
-      }
-  </style>
-  <script defer>
-    function countdown() {
-        const launchDate = new Date("March 3, 2025 12:00:00").getTime();
-        const interval = setInterval(() => {
-            const now = new Date().getTime();
-            const remaining = launchDate - now;
-            
-            if (remaining <= 0) {
-                document.getElementById("countdown").innerHTML = "We are live!";
-                clearInterval(interval);
-                return;
-            }
-            
-            const days = Math.floor(remaining / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((remaining % (1000 * 60)) / 1000);
-            
-            document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-        }, 1000);
-    }
-    countdown();
-</script>
-  </head>
-  <body>
-    <h1>Something Amazing is Coming Soon!</h1>
-    <p>Stay tuned while I craft an awesome experience.</p>
-    <div id="countdown"></div>
-    
-  </body>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script type="module" src="./src/js/main.js"></script>
+</head>
+<body>
+</body>
 </html>
