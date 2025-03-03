@@ -392,3 +392,111 @@ footer {
 .col-right .social-icons i:hover {
     color: white;
 }
+
+@media (max-width: 968px) {
+    section {
+        padding: 8em 15%;
+    }
+
+    nav .btn {
+        display: none;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    .links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        padding: 1em 3em;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.9);
+        display: none;
+    }
+
+    .links a {
+        margin: 2em 0;
+        display: block;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .links.active {
+        display: block;
+    }
+
+    #home h1 {
+        font-size: 4rem;
+    }
+
+    #home h3 {
+        font-size: 2rem;
+    }
+
+    #home img {
+        width: 24vw;
+    }
+
+    #about {
+        flex-direction: column;
+    }
+
+    #about img{
+        width: 32vw;
+    }
+
+    #about h1 {
+        font-size: 3rem;
+    }
+
+    #about ul {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #home h1 {
+        font-size: 2.5rem;
+    }
+
+    #home h3 {
+        font-size: 1.5rem;
+    }
+
+    #home img {
+        width: 32vw;
+    }
+
+    #about .skills {
+        gap: 3em;
+    }
+
+    #projects .header {
+        font-size: 3rem;
+    }
+
+    #contact .header {
+        font-size: 3rem;
+    }
+    #contact .input-box span {
+        font-size: 1.2rem;
+    }
+
+    .input-box input {
+        padding: 0.5em 1em;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 5em;
+        align-items: center;
+
+    }
+}
