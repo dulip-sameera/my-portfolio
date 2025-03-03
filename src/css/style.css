@@ -231,7 +231,7 @@ section {
     background-color: var(--background);
 }
 
-#projects .header {
+.header {
     text-align: center;
     font-size: 5rem;
     margin: 0.5em 0;
