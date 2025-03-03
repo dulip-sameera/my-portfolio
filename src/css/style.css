@@ -33,6 +33,10 @@ nav {
     z-index: 1000;
 }
 
+nav .links .btn {
+    display: none;
+}
+
 ul {
     display: flex;
     align-items: center;
@@ -68,6 +72,7 @@ nav ul a:hover {
     font-weight: 500;
     letter-spacing: 1px;
     border-radius: 0.5em;
+    text-align: center;
     font-size: 1.1rem;
     border: 2px solid white;
     cursor: pointer;
@@ -165,21 +170,11 @@ section {
 #about {
     background-color: var(--second-background);
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5rem;
-}
-
-#about img {
-    width: 30vw;
-    border-radius: 1em;
 }
 
 .about-box {
     display: flex;
-    flex-direction: column;
-    text-align: left;
-    gap: 2em;
+    gap: 5em;
 }
 
 .about-box h1 {
@@ -193,7 +188,6 @@ section {
 
 .skills {
     display: flex;
-    text-align: left;
     gap: 10em;
 }
 
@@ -241,7 +235,7 @@ section {
 
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2em;
 }
 
@@ -250,7 +244,7 @@ section {
     border-radius: 0.5em;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     overflow: hidden;
     object-fit: cover;
     padding: 3em;
@@ -274,6 +268,16 @@ section {
 .box img {
     min-width: 25px;
     border-radius: 0.5em;
+}
+
+.box .card-links {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+
+    & > a {
+        font-size: 1rem;
+    }
 }
 
 /* Contact */
@@ -383,23 +387,28 @@ footer {
     gap: 1em;
 }
 
-.col-right .social-icons i {
+.col-right .social-icons a {
     font-size: 3rem;
     transition: 0.2s ease-in-out;
+    color: transparent;
     cursor: pointer;
 }
 
-.col-right .social-icons i:hover {
+.col-right .social-icons a:hover {
     color: white;
 }
 
-@media (max-width: 968px) {
+@media (max-width: 1250px) {
     section {
         padding: 8em 15%;
     }
 
     nav .btn {
         display: none;
+    }
+
+    nav .links .btn {
+        display: block;
     }
 
     #menu {
@@ -457,6 +466,15 @@ footer {
 
     #about ul {
         font-size: 1rem;
+    }
+
+    .about-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box .card-links {
+        flex-direction: column;
     }
 }
 
